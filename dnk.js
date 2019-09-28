@@ -1,6 +1,7 @@
 const dnkToRnk = (dnk) => {
     let rnk = '';
-    if (dnk === '') {
+    
+    if (dnk === '' ) {
         return '';
     }
     for (let i = 0; i < dnk.length; i++) {
@@ -13,8 +14,9 @@ const dnkToRnk = (dnk) => {
         } else if (dnk[i] === 'A') {
             rnk += 'U';
         } else {
-            return null;
+             alert('Ты ввёл данные не верно. Попробуй ещё раз.')
+             return;
         }
     }
     return rnk;
-  };
+  }
