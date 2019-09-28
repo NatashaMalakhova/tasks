@@ -1,9 +1,9 @@
 const dnkToRnk = (dnk) => {
     let rnk = '';
     
-    if (dnk === '' ) {
-        return '';
-    }
+    if (typeof dnk !== 'string' ) throw new Error ('Ошибка типа данных');
+    if (dnk === '' ) throw new Error ('Ошибка. Пустая строка');
+    
     for (let i = 0; i < dnk.length; i++) {
         if (dnk[i] === 'G') {
             rnk += 'C';
@@ -14,8 +14,7 @@ const dnkToRnk = (dnk) => {
         } else if (dnk[i] === 'A') {
             rnk += 'U';
         } else {
-             alert('Ты ввёл данные не верно. Попробуй ещё раз.')
-             return;
+             throw new Error ('Ошибка ввода строки, неправильные данные или лишние символы');
         }
     }
     return rnk;
