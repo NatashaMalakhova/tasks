@@ -6,4 +6,5 @@ const isPalindrome = (str) => {
     if (strReverse === strNew) return true;
     return false;
 };
+
 export default isPalindrome;
