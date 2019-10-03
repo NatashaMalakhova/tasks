@@ -7,6 +7,6 @@ const substr = (str, startIndex = 0, substrLength = str.length) => {
   if (startIndex > str.length || newSubstrLength === 0) {
     return '';
   }
-  return str.split("").slice(newStartIndex, newStartIndex + newSubstrLength).join("");
+  return str.split('').slice(newStartIndex, newStartIndex + newSubstrLength).join('');
 };
 export default substr;
