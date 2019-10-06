@@ -1,9 +1,12 @@
 const isPalindrome = (str) => {
-  if (str === '') throw new Error ('There is no data. The empty string.');
-  if (str === undefined) throw new Error ('The string is not defined.');
+  if ((str === '') || (str === undefined)) {
+    throw new Error ('No data transferred.')
+  };
 
   str = String(str).toLowerCase().replace(/[/.,!?;_’%:\s/\-/\–/\—/]*/g, '');
-    
+  if (str.length === 0) throw new Error ('No data.');
+  if (str.length === 1) return true;
+
   const result = (str) => {
     let firstIndex = str[0];
     let lastIndex = str[str.length - 1];
