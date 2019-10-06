@@ -14,8 +14,8 @@ const dnkToRnk = (dnk) => {
         } else if (dnk[i] === 'A') {
             rnk += 'U';
         } else {
-             throw new Error ('Ошибка ввода строки, неправильные данные или лишние символы');
+            throw new Error ('Ошибка ввода строки, неправильные данные или лишние символы');
         }
     }
     return rnk;
-  }
+};
