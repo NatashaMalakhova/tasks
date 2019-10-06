@@ -1,9 +1,8 @@
 const substr = (str, startIndex, substrLength) => {
   if (str === undefined) throw new Error ('The string is not defined.');
-  if (startIndex === undefined ) startIndex = 0;
-  if (substrLength === undefined) substrLength = str.lenght;
-
   str = String(str);
+  if (startIndex === undefined ) startIndex = 0;
+  if (substrLength === undefined) substrLength = str.length;
 
   let newStartIndex = (startIndex < 0) ? 0 : startIndex;
   let newSubstrLength = (substrLength < 0) ? 1 : 
